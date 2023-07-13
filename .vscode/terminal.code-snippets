@@ -1,0 +1,29 @@
+{
+  "Format Strategy Implementation": {
+    "prefix": "sch-format-strategy",
+    "body": [
+      "type ${1:FormatStruct}Format struct{}",
+      "",
+      "func (f *${1:FormatStruct}Format) FriendlyName() string {",
+      "\treturn \"${2:friendly name}\"",
+      "}",
+      "",
+      "func (f *${1:FormatStruct}Format) FlagName() string {",
+      "\treturn \"${3:flag name}\"",
+      "}",
+      "",
+      "func (f *${1:FormatStruct}Format) Output() func(colors []color.Color) string {",
+      "\treturn func(colors []color.Color) string {",
+      "\t\treturn \"Not yet implemented\"",
+      "\t}",
+      "}",
+      "",
+      "func (f *${1:FormatStruct}Format) Input() func(filename string) ([]color.Color, error) {",
+      "\treturn func(filename string) ([]color.Color, error) {",
+      "\t\treturn nil, errors.New(\"Not yet implemented\")",
+      "\t}",
+      "}"
+    ],
+    "description": "Create a new struct that implements the Format interface"
+  }
+}
